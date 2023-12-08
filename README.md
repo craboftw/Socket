@@ -24,8 +24,8 @@ class Socket{
 
 class Serializable {
     +Serializable()
-    +Serializable(serializedData: vector<bytes>)
-    +operator const std::vector<bytes>() const
+    +Serializable(serializedData vector<bytes>)
+    +operator const vector<bytes>() const
     +~Serializable()
     +size()
     +empty()
