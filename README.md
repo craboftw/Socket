@@ -7,7 +7,6 @@ Socket <|-- TCPSocket
 Socket <|-- SerialSocket
 EventListner <|-- Socket
 EventListner o-- Suscriber
-%% FactorySocket creates Socket and text it
 FactorySocket --  Socket
 
 class FactorySocket{
@@ -17,10 +16,10 @@ class FactorySocket{
 }
 
 class Socket{
-    open();
-    close();
-    write(Serializable);
-    read();
+    +open();
+    +close();
+    +write(Serializable);
+    +read();
 }
 
 class Serializable {
@@ -30,22 +29,22 @@ class Serializable {
     +~Serializable()
     +size()
     +empty()
-    #serializedData: std::vector<bytes>
+    -serializedData: std::vector<bytes>
     +setVector(serializedData: vector<bytes>)
     +explicit operator string() const
 }
 
 class Suscriber{
-    void update(Serializable updateData)
+    +update(Serializable updateData)
 }
 
 class EventListner{
-    void addSuscriber(Suscriber suscriber)
-    void addSuscriber(Suscriber suscriber, string topic)
-    void removeSuscriber(Suscriber suscriber)
-    void removeSuscriber(Suscriber suscriber, string topic)
-    void removeTopic(string topic)
-    void notify(Serializable updateData)
+    +addSuscriber(Suscriber suscriber)
+    +addSuscriber(Suscriber suscriber, string topic)
+    +removeSuscriber(Suscriber suscriber)
+    +removeSuscriber(Suscriber suscriber, string topic)
+    +removeTopic(string topic)
+    +notify(Serializable updateData)
 }
 
 ```
