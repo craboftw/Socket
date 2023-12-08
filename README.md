@@ -25,15 +25,14 @@ class Socket{
 
 class Serializable {
     +Serializable()
-    +Serializable(serializedData: std::vector<uint8_t>)
-    +operator const std::vector<uint8_t>() const
+    +Serializable(serializedData: vector<bytes>)
+    +operator const std::vector<bytes>() const
     +~Serializable()
-    +size(): int
-    +empty(): bool
-    #serializedData: std::vector<uint8_t>
-    +setVector(serializedData: std::vector<uint8_t>)
-    +friend std::ostream &operator<<(os: std::ostream, serializable: Serializable)
-    +explicit operator std::string() const
+    +size()
+    +empty()
+    #serializedData: std::vector<bytes>
+    +setVector(serializedData: vector<bytes>)
+    +explicit operator string() const
 }
 
 class Suscriber{
