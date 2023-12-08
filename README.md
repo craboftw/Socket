@@ -26,7 +26,6 @@ class Serializable {
     +Serializable()
     +Serializable(serializedData vector<bytes>)
     +operator const vector<bytes>() const
-    +~Serializable()
     +size()
     +empty()
     -serializedData: std::vector<bytes>
